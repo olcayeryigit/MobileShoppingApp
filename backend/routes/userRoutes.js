@@ -12,8 +12,8 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
     service: 'gmail', // Gmail kullanıyorsanız
     auth: {
-      user: 'test81053806@gmail.com',  // Gönderici e-posta adresi
-      pass: 'unrl rfrx ctzs ruhk',   // Gönderici e-posta şifresi veya uygulama şifresi
+      user: '-',  // Gönderici e-posta adresi
+      pass: '-',   // Gönderici e-posta şifresi veya uygulama şifresi
     },
   });
 
@@ -77,7 +77,7 @@ const savedUser=await newUser.save();
   
       // Kullanıcıya e-posta gönder
       const mailOptions = {
-        from: 'test81053806@gmail.com', 
+        from: '-', 
         to: savedUser.email,
         subject: 'Hesap Aktivasyonu',
         html: `
